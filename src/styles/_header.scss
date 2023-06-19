@@ -1,0 +1,18 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: transparent;
+  padding: 36px 36px;
+  transition: background-color 0.3s ease-out, padding 0.3s ease-out;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &--scrolled {
+    background-color: #292058;
+    padding: 30px 36px;
+  }
+}
