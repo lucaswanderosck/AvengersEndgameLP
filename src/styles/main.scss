@@ -3,6 +3,7 @@
 @use "header";
 @use "characteres";
 @use "scrool";
+@use "details";
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,400;1,700&display=swap");
 
 * {
@@ -15,7 +16,9 @@
 }
 
 body {
-  background-color: variables.$bgColor !important;
+  background: #050409;
+  background: linear-gradient(45deg, #050409 0%, #161333 52%, #050409 100%);
+  background-attachment: fixed;
 }
 
 .button {

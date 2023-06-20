@@ -3,14 +3,16 @@
 .characteres {
   padding: 6vw;
 
-  h2 {
+  &__title {
     color: #fff;
     text-align: center;
+    margin-bottom: 20px;
   }
 
   &__list {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
     justify-content: center;
     align-items: center;
     list-style: none;
@@ -51,9 +53,10 @@
         cursor: pointer;
 
         p {
+          margin: 0;
           color: #fff;
           font-size: 16px;
-          padding: 16px 32px;
+          padding: 16px;
         }
       }
 
