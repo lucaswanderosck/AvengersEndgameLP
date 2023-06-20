@@ -1,0 +1,46 @@
+/* Estilos para o scroll */
+/* Largura e cor do scroll */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+  background-color: transparent;
+}
+
+/* Track (área em que o scroll se move) */
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+/* Barra de rolagem (thumb) */
+::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 20px;
+
+}
+
+/* Barra de rolagem ao passar o mouse por cima */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #ddd;
+}
+
+/* Estilos para navegadores Firefox */
+/* Largura e cor do scroll */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #888 transparent;
+}
+
+/* Track (área em que o scroll se move) */
+*::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+/* Barra de rolagem (thumb) */
+*::-webkit-scrollbar-thumb {
+  background-color: #888;
+}
+
+/* Barra de rolagem ao passar o mouse por cima */
+*::-webkit-scrollbar-thumb:hover {
+  background-color: #ddd;
+}

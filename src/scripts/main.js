@@ -4,9 +4,10 @@ document.addEventListener("DOMContentLoaded", function () {
 // Efeito para o scroll no header usando jquery
   $(window).scroll(function () {
     if ($(this).scrollTop() > 0) {
-      $(".header").addClass("header--scrolled");
+      $(".header").addClass("header--is-hidden");
     } else {
-      $(".header").removeClass("header--scrolled");
+      $(".header").removeClass("header--is-hidden");
     }
   });
+
 });

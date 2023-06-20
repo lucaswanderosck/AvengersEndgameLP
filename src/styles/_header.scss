@@ -4,15 +4,40 @@
   left: 0;
   width: 100%;
   background-color: transparent;
-  padding: 36px 36px;
+  padding: 20px 36px;
   transition: background-color 0.3s ease-out, padding 0.3s ease-out;
   z-index: 1;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 
-  &--scrolled {
+  &__container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    max-width: 56px;
+    width: 100%;
+    margin-top: 8px;
+    transition: opacity 0.3s ease-out;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  &__links {
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-out;
+  }
+
+  &--is-hidden {
     background-color: #292058;
-    padding: 30px 36px;
+    padding: 12px 36px;
+
+    .header {
+      &__logo, &__links {
+        transition: opacity 0.3s ease-out;
+        opacity: 1;
+      }
+    }
   }
 }
