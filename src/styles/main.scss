@@ -1,23 +1,15 @@
 @use "variables";
+@use "reset";
 @use "hero";
 @use "header";
 @use "characteres";
 @use "scrool";
 @use "details";
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,400;1,700&display=swap");
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  text-decoration: none;
-  list-style: none;
-  font-family: "Roboto Condensed", sans-serif;
-}
 
 body {
-  background: #050409;
-  background: linear-gradient(45deg, #050409 0%, #161333 52%, #050409 100%);
+  background: variables.$bgColor;
+  background-image: linear-gradient(45deg, #050409 0%, #161333 52%, #050409 100%);
   background-attachment: fixed;
 }
 
