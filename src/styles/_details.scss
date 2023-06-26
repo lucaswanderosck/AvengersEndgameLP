@@ -1,11 +1,7 @@
+@use "variables";
+
 .details {
   padding: 6vw;
-  color: #fff;
-
-  &__title {
-    text-align: center;
-    margin-bottom: 30px;
-  }
 
   &__container {
     display: flex;
@@ -29,14 +25,7 @@
 
     img {
       width: 300px;
-      cursor: pointer;
-      transition: 0.3s ease-out;
-
-      &:hover {
-        box-shadow: #696a7e32 0px 19px 38px, #696a7e33 0px 15px 12px;
-        transition: 0.3s ease-out;
-        
-      }
+      box-shadow: variables.$imgShadow;
 
       @media (max-width: 960px) {
         margin-top: 20px;
@@ -65,8 +54,14 @@
     &__infos {
       div {
         margin: 12px 0;
+
         p {
           margin: 0;
+
+          &:first-child {
+            font-style: italic;
+            color: variables.$secondaryTextColor;
+          }
         }
       }
     }
@@ -103,15 +98,15 @@
         }
 
         p {
-          font-size: 12px;
           margin: 0;
           padding-top: 4px;
-          transition: 0.3s ease;
+          transition: .1s ease;
         }
 
         &:hover p {
-          color: silver;
-          transition: 0.2s ease;
+          color: variables.$secondaryTextColor;
+
+          transition: .1s ease;
         }
       }
     }

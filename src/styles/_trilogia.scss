@@ -1,0 +1,41 @@
+@use 'variables';
+
+.trilogia {
+  padding: 6vw;
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 36px;
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
+
+    &__item {
+      display: flex;
+      justify-content: center;
+
+      a {
+        overflow: hidden;
+        box-shadow: variables.$imgShadow;
+
+        &:hover img {
+          transform: scale(1.05);
+        }
+        
+        img {
+          width: 200px;
+          object-fit: cover;
+          transition: transform 0.8s;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
