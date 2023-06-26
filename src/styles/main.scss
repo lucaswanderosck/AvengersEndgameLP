@@ -1,48 +1,146 @@
 @use "variables";
 @use "reset";
-@use "hero";
 @use "header";
-@use "characteres";
 @use "scrool";
+@use "hero";
+@use "scenes";
+@use "characteres";
 @use "details";
+@use "trailer";
+@use "review";
+@use "trilogia";
+@use "footer";
+@use "frame";
 
+@mixin text($fontSize: 16px) {
+  font-size: $fontSize;
+  color: variables.$mainTextColor;
+}
 
-body {
-  background: variables.$bgColor;
-  background-image: linear-gradient(45deg, #050409 0%, #161333 52%, #050409 100%);
-  background-attachment: fixed;
+@mixin title($fontSize: 40px) {
+  @include text($fontSize);
+  color: variables.$mainTextColor;
+}
+
+.title {
+  @include title;
+  margin-bottom: 32px;
+  text-align: center;
+
+  @media (max-width: 768px) {
+    @include title(24px);
+  }
+}
+
+.title--small {
+  @include title(24px);
+
+  @media (max-width: 768px) {
+    @include title(20px);
+  }
+}
+
+.text {
+  @include text;
+
+  @media (max-width: 768px) {
+    @include text(14px);
+  }
+}
+
+.text--small {
+  @include text(12px);
+
+  @media (max-width: 768px) {
+    @include text(11px);
+  }
+}
+
+.text--big {
+  @include text(18px);
+
+  @media (max-width: 768px) {
+    @include text(15px);
+  }
 }
 
 .button {
-  font-size: 18px;
-  font-weight: bold;
-  color: black;
-  background-color: white;
-  border-radius: 4px;
   text-decoration: none;
-  padding: 8px 24px;
-  border: 1px solid white;
-  transition: 0.3s ease;
+  border-radius: 4px;
+  padding: 8px 12px;
+  background-color: variables.$secondaryTextColor;
+  color: variables.$bgColor;
+  font-weight: bold;
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  position: relative;
 
-  &--secondary {
-    background-color: black;
-    border-color: black;
+  &:before {
+    content: "";
+    position: absolute;
+    border: variables.$secondaryTextColor solid 3px;
+    border-radius: 6px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: top, right, bottom, left;
+    transition-property: top, right, bottom, left;
+  }
 
-    &:hover {
-      background-color: lighten(black, 3%);
-      transition: 0.3s ease;
+  &:hover:before,
+  &:focus:before,
+  &:active:before {
+    top: -6px;
+    right: -6px;
+    bottom: -6px;
+    left: -6px;
+  }
+
+  &--to-action {
+    background-color: variables.$buttonColor;
+    color: variables.$mainTextColor;
+
+    &:before {
+      border: none;
+      outline: variables.$mainTextColor solid 2px;
     }
   }
 
-  &--dark {
-    background-color: #000000;
-    border-color: #ffffff;
-    color: #ffffff;
+  @media (max-width: 576px) {
+    font-size: 14px;
+    padding: 6px 10px;
+  }
+}
 
-    &:hover {
-      background-color: #ffffff;
-      color: #000000;
-      transition: 0.3s ease;
-    }
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: variables.$bgColor;
+  background-image: linear-gradient(
+    0deg,
+    variables.$bgColor 0%,
+    variables.$bgColor 100%
+  );
+  overflow: hidden;
+
+  @media (max-width: 960px) {
+    overflow: scroll;
+  }
+}
+
+.hidden {
+  body {
+    overflow: scroll;
+  }
+
+  .frame {
+    display: none;
   }
 }

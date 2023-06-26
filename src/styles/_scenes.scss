@@ -1,0 +1,15 @@
+@use 'variables';
+
+.scenes {
+  padding: 6vw;
+
+  &__img {
+    max-height: 556px;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .slide {
+    box-shadow: variables.$imgShadow;
+  }
+}

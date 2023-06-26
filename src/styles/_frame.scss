@@ -1,0 +1,31 @@
+.frame {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #000000e6;
+  z-index: 99;
+
+  @media (max-width: 960px) {
+    display: none;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+    &__close {
+      i {
+        cursor: pointer;
+        color: #fff;
+        font-size: 32px;
+        position: fixed;
+        top: 50px;
+        left: 90vw;
+      }
+    }
+  }
+}

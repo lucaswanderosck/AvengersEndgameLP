@@ -29,51 +29,67 @@
   </head>
 
   <body>
-    <header class="header">
-      <div class="header__container">
-        <h1>
-          <img
-            class="header__logo"
-            src="./images/logo-min.png"
-            alt="avengers"
-          />
-        </h1>
-        <ul class="header__links">
-          <li class="header__links__item">
-            <a href="#">4735374723</a>
-          </li>
-          <li class="header__links__item">
-            <a href="#">75837837538</a>
-          </li>
-        </ul>
+    <div class="frame">
+      <div class="frame__container">
+        <div class="frame__container__video">
+          <iframe
+            autoplay="true"
+            width="800"
+            height="450"
+            src="https://www.youtube.com/embed/spJoZReeIeQ?autoplay=1&mute=1"
+            frameborder="0"
+            title="Trailer video youtube"
+            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div class="frame__container__close" id="close">
+          <i class="bi bi-x-lg" title="Fechar"></i>
+        </div>
       </div>
+    </div>
+
+    <header class="header">
+      <div class="header__logo">
+        <a href="#hero"
+          ><img src="../dist/images/logo-min.png" alt="avengers"
+        /></a>
+      </div>
+      <nav class="header__links" id="collapsibleNavId">
+        <a class="button" href="#">Trailer</a>
+        <a
+          class="button button--to-action"
+          href="https://www.disneyplus.com/pt-br/movies/vingadores-ultimato-da-marvel-studios/aRbVJUb2h2Rf"
+          target="_blank"
+          >Assistir Agora</a
+        >
+      </nav>
     </header>
 
-    <section class="hero">
-      <div class="hero__container">
-        <div class="hero__container__branding">
-          <img src="./images/logo.png" alt="" class="hero__image" />
+    <section class="hero" id="hero">
+      <div class="hero__content">
+        <div class="hero__content__branding">
+          <img src="../dist/images/logo.png" alt="avengers endgame" />
         </div>
-        <h2 class="hero__container__title">
-          Já disponível nas principais plataformas
+        <h2 class="hero__content__title">
+          Já Disponível Nas Principais Plataformas
         </h2>
-        <div class="hero__container__infos">
-          <img src="./images/12.png" alt="12" />
-          <img src="./images/imax.png" alt="imax" />
-          <img src="./images/ad.png" alt="ad" />
-          <img src="./images/cc.png" alt="cc" />
-          <!-- <span class="hero__container__infos__time">2019 - 3h 5min</span> -->
-          <!-- <div class="hero__container__infos__details">Ficção científica, Super-heróis, Fantasia, Ação e Aventura</div> -->
+        <div class="hero__content__infos">
+          <img src="../dist/images/12.png" alt="12" />
+          <img src="../dist/images/imax.png" alt="imax" />
+          <img src="../dist/images/ad.png" alt="ad" />
+          <img src="../dist/images/cc.png" alt="cc" />
         </div>
-        <div class="hero__container__links">
-          <button type="button">
-            <a class="button" href="#">Assistir Agora</a>
-          </button>
-          <button type="button">
-            <a class="button button--dark" href="#">Trailer</a>
-          </button>
+        <div class="hero__content__links">
+          <a class="button" href="#">Trailer</a>
+          <a
+            class="button button--to-action"
+            href="https://www.disneyplus.com/pt-br/movies/vingadores-ultimato-da-marvel-studios/aRbVJUb2h2Rf"
+            target="_blank"
+            >Assistir Agora</a
+          >
         </div>
-        <p class="hero__container__text">
+        <p class="hero__content__text text--big">
           No final épico da Saga do Infinito, os Vingadores enfrentam Thanos.
           Quando eventos devastadores eliminam metade da população mundial e
           dividem suas fileiras, o resto dos heróis lutam para avançar. Mas eles
@@ -83,8 +99,98 @@
       </div>
     </section>
 
+    <section class="scenes">
+      <h2 class="title">Cenas do Filme</h2>
+      <div id="carouselId" class="carousel slide">
+        <div class="carousel-indicators">
+          <button
+            data-bs-target="#carouselId"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="one slide"
+          ></button>
+          <button
+            data-bs-target="#carouselId"
+            data-bs-slide-to="1"
+            aria-label="two slide"
+          ></button>
+          <button
+            data-bs-target="#carouselId"
+            data-bs-slide-to="2"
+            aria-label="tree slide"
+          ></button>
+          <button
+            data-bs-target="#carouselId"
+            data-bs-slide-to="3"
+            aria-label="four slide"
+          ></button>
+          <button
+            data-bs-target="#carouselId"
+            data-bs-slide-to="4"
+            aria-label="five slide"
+          ></button>
+        </div>
+        <div class="carousel-inner" role="listbox">
+          <div class="carousel-item active">
+            <img
+              src="../dist/images/slides/slide1.png"
+              class="w-100 d-block scenes__img"
+              alt="First slide"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="../dist/images/slides/slide2.png"
+              class="w-100 d-block scenes__img"
+              alt="Second slide"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="../dist/images/slides/slide3.png"
+              class="w-100 d-block scenes__img"
+              alt="Third slide"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="../dist/images/slides/slide4.png"
+              class="w-100 d-block scenes__img"
+              alt="four slide"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="../dist/images/slides/slide5.png"
+              class="w-100 d-block scenes__img"
+              alt="five slide"
+            />
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselId"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselId"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </section>
+
     <section class="characteres">
-      <h2 class="characteres__title">Personagens</h2>
+      <h2 class="title">Personagens</h2>
       <ul class="characteres__list">
         <li class="characteres__list__item">
           <img
@@ -92,8 +198,8 @@
             src="../dist/images/personagens/Iron-Man-Avengers-Endgame.jpg"
             alt="homem de ferro"
           />
-          <span class="characteres__list__item__text">
-            <p>Homem de ferro</p>
+          <span class="characteres__list__item__text text">
+            <p>Homem de Ferro</p>
           </span>
         </li>
         <li class="characteres__list__item">
@@ -102,7 +208,7 @@
             src="../dist/images/personagens/Captain-America-Avengers-Endgame.jpg"
             alt="Capitão América"
           />
-          <span class="characteres__list__item__text">
+          <span class="characteres__list__item__text text">
             <p>Capitão América</p>
           </span>
         </li>
@@ -112,8 +218,8 @@
             src="../dist/images/personagens/Black-Widow-Avengers-Endgame.jpg"
             alt="Viúva negra"
           />
-          <span class="characteres__list__item__text">
-            <p>Viúva negra</p>
+          <span class="characteres__list__item__text text">
+            <p>Viúva Negra</p>
           </span>
         </li>
         <li class="characteres__list__item">
@@ -122,7 +228,7 @@
             src="../dist/images/personagens/Thor-Avengers-Endgame.jpg"
             alt="Thor"
           />
-          <span class="characteres__list__item__text">
+          <span class="characteres__list__item__text text">
             <p>Thor</p>
           </span>
         </li>
@@ -132,7 +238,7 @@
             src="../dist/images/personagens/Bruce-Banner-Avengers-Endgame.jpg"
             alt="Bruce Banner"
           />
-          <span class="characteres__list__item__text">
+          <span class="characteres__list__item__text text">
             <p>Bruce Banner</p>
           </span>
         </li>
@@ -142,7 +248,7 @@
             src="../dist/images/personagens/Captain-Marvel-Avengers-Endgame.jpg"
             alt="Capitã Marvel"
           />
-          <span class="characteres__list__item__text">
+          <span class="characteres__list__item__text text">
             <p>Capitã Marvel</p>
           </span>
         </li>
@@ -152,7 +258,7 @@
             src="../dist/images/personagens/Antman-Avengers-Endgame.jpg"
             alt="Homem Formiga"
           />
-          <span class="characteres__list__item__text">
+          <span class="characteres__list__item__text text">
             <p>Homem Formiga</p>
           </span>
         </li>
@@ -162,7 +268,7 @@
             src="../dist/images/personagens/Hawkeye-Avengers-Endgame.jpg"
             alt="Gavião Arqueiro"
           />
-          <span class="characteres__list__item__text">
+          <span class="characteres__list__item__text text">
             <p>Gavião Arqueiro</p>
           </span>
         </li>
@@ -172,7 +278,7 @@
             src="../dist/images/personagens/rocket-Avengers-Endgame.jpg"
             alt="Rocket"
           />
-          <span class="characteres__list__item__text">
+          <span class="characteres__list__item__text text">
             <p>Rocket</p>
           </span>
         </li>
@@ -182,7 +288,7 @@
             src="../dist/images/personagens/War-Machine-Avengers-Endgame.jpg"
             alt="Rocket"
           />
-          <span class="characteres__list__item__text">
+          <span class="characteres__list__item__text text">
             <p>Máquina de Combate</p>
           </span>
         </li>
@@ -190,16 +296,16 @@
     </section>
 
     <section class="details">
-      <h2 class="details__title">Detalhes</h2>
+      <h2 class="title">Detalhes</h2>
       <div class="details__container">
         <div class="details__poster">
           <img src="../dist/images/endgame-poster1-xl-1.png" alt="poster" />
         </div>
         <div class="details__description">
-          <h4 class="details__description__title">
+          <h4 class="details__description__title title--small">
             Vingadores Ultimato: Marvel Studios
           </h4>
-          <p class="details__description__text">
+          <p class="details__description__text text">
             No final épico da Saga do Infinito, os Vingadores enfrentam o vilão
             mais poderoso do universo, Thanos. Quando eventos devastadores
             eliminam metade da população mundial e dividem suas fileiras, o
@@ -208,7 +314,7 @@
             entes queridos. Algumas sequências ou padrões de luz intermitente
             podem afetar telespectadores fotossensíveis.
           </p>
-          <div class="details__description__infos">
+          <div class="details__description__infos text">
             <div>
               <p>Duração:</p>
               <p>3h 5min</p>
@@ -228,50 +334,224 @@
           </div>
         </div>
         <div class="details__elenco">
-          <h4 class="details__elenco__title">Elenco</h4>
+          <h4 class="details__elenco__title title--small">Elenco</h4>
           <ul class="details__elenco__list">
             <li class="details__elenco__list__item">
               <img src="../dist/images/elenco/robert.jpg" alt="robert" />
-              <p>Robert Downey Jr.</p>
+              <p class="text--small">Robert Downey Jr.</p>
             </li>
             <li class="details__elenco__list__item">
               <img
                 src="../dist/images/elenco/chris-evans.jpg"
                 alt="chris-evans"
               />
-              <p>Chris Evans</p>
+              <p class="text--small">Chris Evans</p>
             </li>
             <li class="details__elenco__list__item">
               <img
                 src="../dist/images/elenco/chris-hemsworth.jpg"
                 alt="chris-hemsworth"
               />
-              <p>Chris Hemsworth</p>
+              <p class="text--small">Chris Hemsworth</p>
             </li>
             <li class="details__elenco__list__item">
               <img
                 src="../dist/images/elenco/mark-ruffalo.jpg"
                 alt="mark-ruffalo"
               />
-              <p>Mark Ruffalo</p>
+              <p class="text--small">Mark Ruffalo</p>
             </li>
             <li class="details__elenco__list__item">
               <img src="../dist/images/elenco/scarlett.jpg" alt="scarlet" />
-              <p>Scarlett Johansson</p>
+              <p class="text--small">Scarlett Johansson</p>
             </li>
             <li class="details__elenco__list__item">
               <img
                 src="../dist/images/elenco/brie-larson.jpg"
                 alt="brie-larson"
               />
-              <p>Brie Larson</p>
+              <p class="text--small">Brie Larson</p>
             </li>
           </ul>
         </div>
       </div>
     </section>
 
-    <footer style="padding: 500px"></footer>
+    <section class="review">
+      <h2 class="title">Críticas Sobre o Filme</h2>
+      <h4 class="title title--small">
+        Descubra o que os principais portais de entretenimento acharam sobre
+        essa produção cinematográfica.
+      </h4>
+      <ul class="review__accordion">
+        <li class="review__accordion__item">
+          <div class="review__accordion__item__header">
+            <div class="review__accordion__item__header__text">
+              <img src="./images/criticas/adoro-cinema.png" alt="" />
+            </div>
+            <i class="bi bi-chevron-down"></i>
+          </div>
+          <div class="review__accordion__item__content">
+            <ul>
+              <li class="text">
+                "Vingadores: Ultimato é uma conclusão épica e emocional para a
+                Saga do Infinito da Marvel."
+              </li>
+
+              <li class="text">
+                "O filme apresenta uma narrativa complexa e satisfatória,
+                amarrando bem os arcos dos personagens."
+              </li>
+              <li class="text">
+                "As cenas de ação são espetaculares e o ritmo do filme é bem
+                equilibrado.
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="review__accordion__item">
+          <div class="review__accordion__item__header">
+            <div class="review__accordion__item__header__text">
+              <img src="./images/criticas/roten-tomates.png" alt="" />
+            </div>
+            <i class="bi bi-chevron-down"></i>
+          </div>
+          <div class="review__accordion__item__content">
+            <ul>
+              <li class="text">
+                "Vingadores: Ultimato entrega um final grandioso e emocionante
+                para os fãs da Marvel."
+              </li>
+              <li class="text">
+                "Os efeitos visuais são impressionantes e a trama é repleta de
+                momentos de surpresa e nostalgia."
+              </li>
+              <li class="text">
+                "O filme é uma celebração do universo cinematográfico da Marvel
+                e proporciona uma experiência cinematográfica memorável."
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="review__accordion__item">
+          <div class="review__accordion__item__header">
+            <div class="review__accordion__item__header__text">
+              <img src="./images/criticas/omelete.png" alt="" />
+            </div>
+            <i class="bi bi-chevron-down"></i>
+          </div>
+          <div class="review__accordion__item__content">
+            <ul>
+              <li class="text">
+                "Vingadores: Ultimato é uma experiência cinematográfica
+                imperdível, cheia de momentos épicos."
+              </li>
+              <li class="text">
+                "Os personagens têm desenvolvimento significativo e a interação
+                entre eles é cativante."
+              </li>
+              <li class="text">
+                "O filme fecha com chave de ouro a jornada dos Vingadores,
+                trazendo um desfecho emocionante."
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="review__accordion__item">
+          <div class="review__accordion__item__header">
+            <div class="review__accordion__item__header__text">
+              <img src="./images/criticas/cinepop.png" alt="" />
+            </div>
+            <i class="bi bi-chevron-down"></i>
+          </div>
+          <div class="review__accordion__item__content">
+            <ul>
+              <li class="text">
+                "Épico, audacioso e impecável, 'Ultimato' consegue encerrar com
+                louvor a história dos nossos heróis."
+              </li>
+              <li class="text">
+                "A trama habilmente entrelaça diferentes linhas narrativas,
+                criando momentos de tensão e revelações surpreendentes."
+              </li>
+              <li class="text">
+                "É um espetáculo visual, auditivo e uma experiência que agradará
+                em cheio quem é fã, e até quem não é. Imperdível!"
+              </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section class="trailer">
+      <h2 class="title">Assista o Trailer</h2>
+      <div class="trailer__container">
+        <div class="trailer__container__video">
+          <iframe
+            width="400"
+            height="225"
+            src="https://www.youtube.com/embed/spJoZReeIeQ"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+    </section>
+
+    <section class="trilogia">
+      <h2 class="title">Veja Mais</h2>
+      <h4 class="title title--small">
+        Aprofunde-se no universo dos Vingadores: Conheça outros filmes da saga e suas histórias épicas!
+      </h4>
+      <ul class="trilogia__list">
+        <li class="trilogia__list__item">
+          <a
+            href="https://www.disneyplus.com/pt-br/movies/the-avengers-os-vingadores-da-marvel-studios/2h6PcHFDbsPy"
+            target="_blank"
+            ><img src="./images/trilogia/vingadores1.png" alt="vingadores 1"
+          /></a>
+        </li>
+        <li class="trilogia__list__item">
+          <a
+            href="https://www.disneyplus.com/pt-br/movies/vingadores-era-de-ultron-da-marvel-studios/76IUxY0rNHzt"
+            target="_blank"
+            ><img src="./images/trilogia/vingadores2.png" alt="vingadores 2"
+          /></a>
+        </li>
+        <li class="trilogia__list__item">
+          <a
+            href="https://www.disneyplus.com/pt-br/movies/vingadores-guerra-infinita-da-marvel-studios/1WEuZ7H6y39v"
+            target="_blank"
+            ><img src="./images/trilogia/vingadores3.png" alt="vingadores 3"
+          /></a>
+        </li>
+      </ul>
+    </section>
+
+    <footer class="footer">
+      <button class="footer__btn" id="scrollTop" title="Ir para o topo">
+        <i class="bi bi-chevron-double-up"></i>
+      </button>
+      <img class="footer__image" src="./images/marvel.png" alt="marvel" />
+      <div class="footer__social-links">
+        <a href="https://instagram.com/marvel" target="_blank"
+          ><i class="bi bi-instagram"></i
+        ></a>
+        <a href="https://youtube.com/marvel" target="_blank"
+          ><i class="bi bi-youtube"></i
+        ></a>
+        <a href="https://twitter.com/marvel" target="_blank"
+          ><i class="bi bi-twitter"></i
+        ></a>
+        <a href="https://facebook.com/marvel" target="_blank"
+          ><i class="bi bi-facebook"></i
+        ></a>
+      </div>
+    </footer>
+
     <!-- Scripts -->
     <script
       src="https://code.jquery.com/jquery-3.7.0.min.js"

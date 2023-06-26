@@ -1,42 +1,35 @@
+@use "variables";
+
 .header {
   position: fixed;
-  top: 0;
-  left: 0;
+  background-color: variables.$headerBgColor;
+  padding: 12px 4vw;
+  top: -90px;
   width: 100%;
-  background-color: transparent;
-  padding: 20px 36px;
-  transition: background-color 0.3s ease-out, padding 0.3s ease-out;
-  z-index: 1;
+  transition: top 0.3s;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
-  &__container {
-    display: flex;
-    justify-content: space-between;
+  &--active {
+    top: 0;
   }
 
   &__logo {
-    max-width: 56px;
-    width: 100%;
-    margin-top: 8px;
-    transition: opacity 0.3s ease-out;
-    opacity: 0;
-    pointer-events: none;
+    img {
+      max-width: 60px;
+
+      @media (max-width: 768px) {
+        max-width: 50px;
+      }
+    }
   }
 
   &__links {
-    display: flex;
-    align-items: center;
-    opacity: 0;
-    transition: opacity 0.3s ease-out;
-  }
-
-  &--is-hidden {
-    background-color: #292058;
-    padding: 12px 36px;
-
-    .header {
-      &__logo, &__links {
-        transition: opacity 0.3s ease-out;
-        opacity: 1;
+    a {
+      &:last-child {
+        margin-left: 16px;
       }
     }
   }

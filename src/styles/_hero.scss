@@ -1,35 +1,53 @@
 .hero {
   padding: 6vw;
   min-height: 100vh;
-  background-image: url(../images/hero.png);
+  background-image: url(../../dist/images/hero.png);
   background-repeat: no-repeat;
   background-size: cover;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1439px) {
     background-size: contain;
   }
 
-  &__container {
-    width: 40vw;
+  @media (max-width: 768px) {
+    background-image: url(../../dist/images/hero2.png);
+    background-repeat: no-repeat;
+    padding-top: calc(50vw + 25px);
+  }
+
+  &__content {
+    max-width: 640px;
+     
 
     @media (max-width: 768px) {
-      width: 100%;
+      text-align: center;
+      max-width: 100%;
     }
 
     &__branding {
+      @media (max-width: 768px) {
+        padding-top: 30px;
+        display: flex;
+        justify-content: center;
+      }
+
       img {
-        width: 400px;
+        max-width: 320px;
 
         @media (max-width: 768px) {
-          width: 140px;
+          max-width: 180px;
         }
       }
     }
 
     &__title {
-      font-size: 28px;
-      color: #c36c14;
+      font-size: 24px;
       font-weight: bold;
+      color: #ffdb6e;
+
+      @media (max-width: 768px) {
+        font-size: 20px;
+      }
     }
 
     &__infos {
@@ -41,20 +59,28 @@
         height: 20px;
         margin-right: 8px;
       }
+
+      @media (max-width: 768px) {
+        justify-content: center;
+      }
     }
 
     &__links {
       padding-top: 16px;
 
-      button {
-        border: none;
+      a {
+        &:last-child {
+          margin-left: 16px;
+        }
       }
     }
 
     &__text {
       padding: 32px 0;
-      color: white;
-      font-size: 18px;
+
+      @media (max-width: 768px) {
+        text-align: justify;
+      }
     }
   }
 }

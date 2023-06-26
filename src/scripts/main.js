@@ -1,13 +1,43 @@
 document.addEventListener("DOMContentLoaded", function () {
   AOS.init();
 
-// Efeito para o scroll no header usando jquery
+  // Efeito para o scroll no header usando jquery
   $(window).scroll(function () {
-    if ($(this).scrollTop() > 0) {
-      $(".header").addClass("header--is-hidden");
+    if ($(this).scrollTop() > 20) {
+      $(".header").addClass("header--active");
     } else {
-      $(".header").removeClass("header--is-hidden");
+      $(".header").removeClass("header--active");
     }
   });
 
+  // Accordion na seção de criticas
+
+  const acordionHeader = document.getElementsByClassName(
+    "review__accordion__item__header"
+  );
+
+  for (let i = 0; i < acordionHeader.length; i++) {
+    acordionHeader[i].addEventListener("click", function () {
+      this.classList.toggle("review__accordion__item--active");
+
+      const acordionContent = this.nextElementSibling;
+
+      if (acordionContent.style.maxHeight) {
+        acordionContent.style.maxHeight = null;
+      } else {
+        acordionContent.style.maxHeight = acordionContent.scrollHeight + "px";
+      }
+    });
+  }
+
+  // ir para o topo
+  const top = document.getElementById("scrollTop");
+  top.addEventListener("click", function () {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  });
+
+  document.getElementById("close").addEventListener("click", function () {
+    document.documentElement.classList.add("hidden");
+  });
 });

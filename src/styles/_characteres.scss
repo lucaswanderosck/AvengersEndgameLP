@@ -3,12 +3,6 @@
 .characteres {
   padding: 6vw;
 
-  &__title {
-    color: #fff;
-    text-align: center;
-    margin-bottom: 20px;
-  }
-
   &__list {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -25,6 +19,13 @@
       white-space: nowrap;
     }
 
+    @media (min-width: 769px) and (max-width: 960px) {
+      grid-template-columns: repeat(4, 1fr);
+      max-width: 600px;
+      width: 100%;
+      margin: 0 auto;
+    }
+
     &__item {
       display: inline;
       position: relative;
@@ -32,13 +33,24 @@
       text-align: center;
 
       &__img {
+        opacity: 1;
         height: 300px;
         cursor: pointer;
         border-radius: 16px;
-        opacity: 1;
         display: inline;
-        transition: 0.5s ease;
+        transition: .5s ease;
+        -webkit-transition: .5s ease;
         backface-visibility: hidden;
+        box-shadow: variables.$imgShadow;
+
+
+        @media (max-width: 768px) {
+          height: 24vh;
+        }
+
+        @media (min-width: 769px) and (max-width: 960px) {
+          height: 20vh;
+        }
       }
 
       &__text {
@@ -54,14 +66,12 @@
 
         p {
           margin: 0;
-          color: #fff;
-          font-size: 16px;
           padding: 16px;
         }
       }
 
       &:hover &__img {
-        opacity: 0.5;
+        opacity: .7;
       }
 
       &:hover &__text {

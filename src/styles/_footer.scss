@@ -1,0 +1,62 @@
+@use "variables";
+
+.footer {
+  padding: 6vw 6vw 4vw;
+  background: rgb(15, 8, 38);
+  background: linear-gradient(180deg, #0f0826 10%, #000 100%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__btn {
+    border: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 20px;
+    transition: 0.1s ease;
+    background-color: variables.$secondaryTextColor;
+
+    &:hover {
+      background-color: variables.$mainTextColor;
+      transition: 0.1s ease;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 16px;
+      padding: 6px 10px;
+    }
+  }
+
+  &__image {
+    max-width: 112px;
+
+    @media (max-width: 768px) {
+      max-width: 96px;
+    }
+  }
+
+  &__social-links {
+    cursor: pointer;
+
+    a {
+      text-decoration: none;
+      color: variables.$secondaryTextColor;
+      margin-left: 18px;
+      font-size: 18px;
+      transition: 0.1s ease;
+
+      &:first-child {
+        margin: 0;
+      }
+
+      &:hover {
+        color: variables.$mainTextColor;
+        transition: 0.1s ease;
+      }
+
+      @media (max-width: 768px) {
+        font-size: 16px;
+      }
+    }
+  }
+}
