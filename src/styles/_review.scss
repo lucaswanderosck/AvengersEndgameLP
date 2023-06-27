@@ -1,3 +1,5 @@
+@use "variables";
+
 .review {
   padding: 6vw;
 
@@ -6,7 +8,7 @@
     padding: 0;
 
     &__item {
-      background-color: #000;
+      background-color: variables.$darkColor;
       margin-bottom: 12px;
 
       &:nth-child(2) {
@@ -22,13 +24,20 @@
       }
 
       &__header {
-        color: #fff;
-        font-size: 20px;
         padding: 24px;
         cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
         user-select: none;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
         justify-content: space-between;
 
         &__text {
@@ -38,8 +47,16 @@
         }
 
         i {
+          font-size: 18px;
           margin-left: 12px;
+          -webkit-transition: 0.4s ease-out;
+          -o-transition: 0.4s ease-out;
           transition: 0.4s ease-out;
+          color: variables.$secondaryTextColor;
+        }
+
+        &:hover i {
+          color: variables.$mainTextColor;
         }
 
         @media (max-width: 768px) {
@@ -50,7 +67,12 @@
       &__content {
         max-height: 0;
         overflow: hidden;
+        -webkit-transition: max-height 0.4s ease-out;
+        -o-transition: max-height 0.4s ease-out;
         transition: max-height 0.4s ease-out;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
         user-select: none;
 
         ul {
@@ -65,10 +87,12 @@
 
       &--active {
         i {
-          transform: rotate(-180deg);
-          transition: 0.4s ease-out;
+          -webkit-transform: rotate(-180deg);
           -ms-transform: rotate(-180deg);
+          transform: rotate(-180deg);
           -webkit-transition: 0.4s ease-out;
+          -o-transition: 0.4s ease-out;
+          transition: 0.4s ease-out;
         }
       }
     }

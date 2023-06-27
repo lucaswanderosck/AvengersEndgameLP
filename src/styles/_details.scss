@@ -4,30 +4,49 @@
   padding: 6vw;
 
   &__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 
-    @media (max-width: 960px) {
+    @media (max-width: 1100px) {
       display: block;
     }
   }
 
   &__poster {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
 
-    @media (max-width: 960px) {
+    @media (max-width: 1100px) {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
       justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
       align-items: center;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
       flex-direction: column;
     }
 
     img {
-      width: 300px;
+      max-height: 400px;
+      -webkit-box-shadow: variables.$imgShadow;
       box-shadow: variables.$imgShadow;
 
-      @media (max-width: 960px) {
+      @media (max-width: 1100px) {
         margin-top: 20px;
       }
     }
@@ -39,7 +58,7 @@
     &__title {
       margin-bottom: 20px;
 
-      @media (max-width: 960px) {
+      @media (max-width: 1100px) {
         text-align: center;
         margin-top: 30px;
       }
@@ -75,16 +94,22 @@
     &__title {
       margin-bottom: 20px;
 
-      @media (max-width: 960px) {
+      @media (max-width: 1100px) {
         text-align: center;
         margin-top: 30px;
       }
     }
 
     &__list {
+      display: -ms-grid;
       display: grid;
+      -ms-grid-columns: 1fr 20px 1fr 20px 1fr;
       grid-template-columns: repeat(3, 1fr);
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
       justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
       align-items: center;
       list-style: none;
       padding: 0;
@@ -100,13 +125,16 @@
         p {
           margin: 0;
           padding-top: 4px;
-          transition: .1s ease;
+          -webkit-transition: 0.1s ease;
+          -o-transition: 0.1s ease;
+          transition: 0.1s ease;
         }
 
         &:hover p {
           color: variables.$secondaryTextColor;
-
-          transition: .1s ease;
+          -webkit-transition: 0.1s ease;
+          -o-transition: 0.1s ease;
+          transition: 0.1s ease;
         }
       }
     }

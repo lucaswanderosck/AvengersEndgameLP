@@ -1,10 +1,12 @@
+@use "variables";
+
 .frame {
   height: 100%;
   width: 100%;
   position: fixed;
   top: 0;
   left: 0;
-  background-color: #000000e6;
+  background-color: variables.$darkOpacity;
   z-index: 99;
 
   @media (max-width: 960px) {
@@ -12,15 +14,21 @@
   }
 
   &__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     height: 100%;
 
     &__close {
       i {
         cursor: pointer;
-        color: #fff;
+        color: variables.$mainTextColor;
         font-size: 32px;
         position: fixed;
         top: 50px;

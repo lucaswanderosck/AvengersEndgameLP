@@ -1,5 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   AOS.init();
+  const acordionHeader = document.getElementsByClassName("review__accordion__item__header");
+  const top = document.getElementById("scrollTop");
 
   // Efeito para o scroll no header usando jquery
   $(window).scroll(function () {
@@ -11,11 +13,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // Accordion na seção de criticas
-
-  const acordionHeader = document.getElementsByClassName(
-    "review__accordion__item__header"
-  );
-
   for (let i = 0; i < acordionHeader.length; i++) {
     acordionHeader[i].addEventListener("click", function () {
       this.classList.toggle("review__accordion__item--active");
@@ -31,7 +28,6 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // ir para o topo
-  const top = document.getElementById("scrollTop");
   top.addEventListener("click", function () {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;

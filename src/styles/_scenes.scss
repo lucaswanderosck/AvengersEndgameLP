@@ -1,4 +1,4 @@
-@use 'variables';
+@use "variables";
 
 .scenes {
   padding: 6vw;
@@ -6,10 +6,12 @@
   &__img {
     max-height: 556px;
     height: 100%;
+    -o-object-fit: cover;
     object-fit: cover;
   }
 
   .slide {
+    -webkit-box-shadow: variables.$imgShadow;
     box-shadow: variables.$imgShadow;
   }
 }

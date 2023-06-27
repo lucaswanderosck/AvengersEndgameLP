@@ -1,16 +1,27 @@
 @use "variables";
-@use "reset";
 @use "header";
 @use "scrool";
 @use "hero";
 @use "scenes";
 @use "characteres";
 @use "details";
-@use "trailer";
 @use "review";
+@use "trailer";
 @use "trilogia";
 @use "footer";
 @use "frame";
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Roboto", sans-serif;
+}
 
 @mixin text($fontSize: 16px) {
   font-size: $fontSize;
@@ -59,7 +70,7 @@
 .text--big {
   @include text(18px);
 
-  @media (max-width: 768px) {
+  @media (max-width: 992px) {
     @include text(15px);
   }
 }
@@ -69,7 +80,7 @@
   border-radius: 4px;
   padding: 8px 12px;
   background-color: variables.$secondaryTextColor;
-  color: variables.$bgColor;
+  color: variables.$darkColor;
   font-weight: bold;
   display: inline-block;
   vertical-align: middle;
@@ -87,8 +98,10 @@
     bottom: 0;
     left: 0;
     -webkit-transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
     transition-duration: 0.3s;
     -webkit-transition-property: top, right, bottom, left;
+    -o-transition-property: top, right, bottom, left;
     transition-property: top, right, bottom, left;
   }
 
@@ -122,12 +135,6 @@ html {
 }
 
 body {
-  background: variables.$bgColor;
-  background-image: linear-gradient(
-    0deg,
-    variables.$bgColor 0%,
-    variables.$bgColor 100%
-  );
   overflow: hidden;
 
   @media (max-width: 960px) {

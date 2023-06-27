@@ -4,33 +4,23 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vingadores Ultimato | Assista Agora</title>
+    <title>Vingadores Ultimato | Marvel Studios</title>
     <link rel="stylesheet" href="../dist/styles/main.css" />
 
     <!-- Bootstrap -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
-    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
 
     <!-- AOS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
     <!-- Favicon -->
-    <link
-      rel="shortcut icon"
-      href="./images/favicon/favicon.ico"
-      type="image/x-icon"
-    />
+    <link rel="shortcut icon" href="../dist/images/favicon/favicon.ico" type="image/x-icon" />
   </head>
 
-  <body>
+  <body style="background-color: #0F0826;">
     <div class="frame">
-      <div class="frame__container">
+      <div class="frame__container" data-aos="fade-down">
         <div class="frame__container__video">
           <iframe
             autoplay="true"
@@ -40,8 +30,8 @@
             frameborder="0"
             title="Trailer video youtube"
             allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
+            allowfullscreen 
+            ></iframe>
         </div>
         <div class="frame__container__close" id="close">
           <i class="bi bi-x-lg" title="Fechar"></i>
@@ -51,18 +41,13 @@
 
     <header class="header">
       <div class="header__logo">
-        <a href="#hero"
-          ><img src="../dist/images/logo-min.png" alt="avengers"
-        /></a>
+        <a href="#hero"><img src="../dist/images/logo-min.png" alt="avengers" /></a>
       </div>
       <nav class="header__links" id="collapsibleNavId">
-        <a class="button" href="#">Trailer</a>
-        <a
-          class="button button--to-action"
+        <a class="button" href="#trailer">Trailer</a>
+        <a class="button button--to-action"
           href="https://www.disneyplus.com/pt-br/movies/vingadores-ultimato-da-marvel-studios/aRbVJUb2h2Rf"
-          target="_blank"
-          >Assistir Agora</a
-        >
+          target="_blank">Assistir Agora</a>
       </nav>
     </header>
 
@@ -72,7 +57,7 @@
           <img src="../dist/images/logo.png" alt="avengers endgame" />
         </div>
         <h2 class="hero__content__title">
-          Já Disponível Nas Principais Plataformas
+          Assista o Desfecho Épico Desta Saga
         </h2>
         <div class="hero__content__infos">
           <img src="../dist/images/12.png" alt="12" />
@@ -81,13 +66,10 @@
           <img src="../dist/images/cc.png" alt="cc" />
         </div>
         <div class="hero__content__links">
-          <a class="button" href="#">Trailer</a>
-          <a
-            class="button button--to-action"
+          <a class="button" href="#trailer">Trailer</a>
+          <a class="button button--to-action"
             href="https://www.disneyplus.com/pt-br/movies/vingadores-ultimato-da-marvel-studios/aRbVJUb2h2Rf"
-            target="_blank"
-            >Assistir Agora</a
-          >
+            target="_blank">Assistir Agora</a>
         </div>
         <p class="hero__content__text text--big">
           No final épico da Saga do Infinito, os Vingadores enfrentam Thanos.
@@ -99,7 +81,7 @@
       </div>
     </section>
 
-    <section class="scenes">
+    <section class="scenes" data-aos="fade-up">
       <h2 class="title">Cenas do Filme</h2>
       <div id="carouselId" class="carousel slide">
         <div class="carousel-indicators">
@@ -137,6 +119,7 @@
               src="../dist/images/slides/slide1.png"
               class="w-100 d-block scenes__img"
               alt="First slide"
+              loading="lazy"
             />
           </div>
           <div class="carousel-item">
@@ -144,6 +127,7 @@
               src="../dist/images/slides/slide2.png"
               class="w-100 d-block scenes__img"
               alt="Second slide"
+              loading="lazy"
             />
           </div>
           <div class="carousel-item">
@@ -151,6 +135,7 @@
               src="../dist/images/slides/slide3.png"
               class="w-100 d-block scenes__img"
               alt="Third slide"
+              loading="lazy"
             />
           </div>
           <div class="carousel-item">
@@ -158,6 +143,7 @@
               src="../dist/images/slides/slide4.png"
               class="w-100 d-block scenes__img"
               alt="four slide"
+              loading="lazy"
             />
           </div>
           <div class="carousel-item">
@@ -165,6 +151,7 @@
               src="../dist/images/slides/slide5.png"
               class="w-100 d-block scenes__img"
               alt="five slide"
+              loading="lazy"
             />
           </div>
         </div>
@@ -189,104 +176,114 @@
       </div>
     </section>
 
-    <section class="characteres">
+    <section class="characteres" data-aos="fade-up">
       <h2 class="title">Personagens</h2>
       <ul class="characteres__list">
-        <li class="characteres__list__item">
+        <li class="characteres__list__item" data-aos="fade-up">
           <img
             class="characteres__list__item__img"
             src="../dist/images/personagens/Iron-Man-Avengers-Endgame.jpg"
             alt="homem de ferro"
+            loading="lazy"
           />
           <span class="characteres__list__item__text text">
             <p>Homem de Ferro</p>
           </span>
         </li>
-        <li class="characteres__list__item">
+        <li class="characteres__list__item" data-aos="fade-up">
           <img
             class="characteres__list__item__img"
             src="../dist/images/personagens/Captain-America-Avengers-Endgame.jpg"
             alt="Capitão América"
+            loading="lazy"
           />
           <span class="characteres__list__item__text text">
             <p>Capitão América</p>
           </span>
         </li>
-        <li class="characteres__list__item">
+        <li class="characteres__list__item" data-aos="fade-up">
           <img
             class="characteres__list__item__img"
             src="../dist/images/personagens/Black-Widow-Avengers-Endgame.jpg"
             alt="Viúva negra"
+            loading="lazy"
           />
           <span class="characteres__list__item__text text">
             <p>Viúva Negra</p>
           </span>
         </li>
-        <li class="characteres__list__item">
+        <li class="characteres__list__item" data-aos="fade-up">
           <img
             class="characteres__list__item__img"
             src="../dist/images/personagens/Thor-Avengers-Endgame.jpg"
             alt="Thor"
+            loading="lazy"
           />
           <span class="characteres__list__item__text text">
             <p>Thor</p>
           </span>
         </li>
-        <li class="characteres__list__item">
+        <li class="characteres__list__item" data-aos="fade-up">
           <img
             class="characteres__list__item__img"
             src="../dist/images/personagens/Bruce-Banner-Avengers-Endgame.jpg"
             alt="Bruce Banner"
+            loading="lazy"
           />
           <span class="characteres__list__item__text text">
             <p>Bruce Banner</p>
           </span>
         </li>
-        <li class="characteres__list__item">
+        <li class="characteres__list__item" data-aos="fade-up">
           <img
             class="characteres__list__item__img"
             src="../dist/images/personagens/Captain-Marvel-Avengers-Endgame.jpg"
             alt="Capitã Marvel"
+            loading="lazy"
           />
           <span class="characteres__list__item__text text">
             <p>Capitã Marvel</p>
           </span>
         </li>
-        <li class="characteres__list__item">
+        <li class="characteres__list__item" data-aos="fade-up">
           <img
             class="characteres__list__item__img"
             src="../dist/images/personagens/Antman-Avengers-Endgame.jpg"
             alt="Homem Formiga"
+            loading="lazy"
           />
           <span class="characteres__list__item__text text">
             <p>Homem Formiga</p>
           </span>
         </li>
-        <li class="characteres__list__item">
+        <li class="characteres__list__item" data-aos="fade-up">
           <img
             class="characteres__list__item__img"
             src="../dist/images/personagens/Hawkeye-Avengers-Endgame.jpg"
             alt="Gavião Arqueiro"
+            loading="lazy"
           />
           <span class="characteres__list__item__text text">
             <p>Gavião Arqueiro</p>
           </span>
         </li>
-        <li class="characteres__list__item">
+        <li class="characteres__list__item" data-aos="fade-up">
           <img
             class="characteres__list__item__img"
             src="../dist/images/personagens/rocket-Avengers-Endgame.jpg"
             alt="Rocket"
+            loading="lazy"
           />
           <span class="characteres__list__item__text text">
             <p>Rocket</p>
           </span>
         </li>
-        <li class="characteres__list__item">
+        <li class="characteres__list__item" data-aos="fade-up">
           <img
             class="characteres__list__item__img"
             src="../dist/images/personagens/War-Machine-Avengers-Endgame.jpg"
             alt="Rocket"
+            loading="lazy"
           />
           <span class="characteres__list__item__text text">
             <p>Máquina de Combate</p>
@@ -295,13 +292,13 @@
       </ul>
     </section>
 
-    <section class="details">
+    <section class="details" data-aos="fade-up">
       <h2 class="title">Detalhes</h2>
       <div class="details__container">
-        <div class="details__poster">
-          <img src="../dist/images/endgame-poster1-xl-1.png" alt="poster" />
+        <div class="details__poster" data-aos="fade-up">
+          <img src="../dist/images/poster.png" alt="poster" loading="lazy" />
         </div>
-        <div class="details__description">
+        <div class="details__description" data-aos="fade-up">
           <h4 class="details__description__title title--small">
             Vingadores Ultimato: Marvel Studios
           </h4>
@@ -333,17 +330,22 @@
             </div>
           </div>
         </div>
-        <div class="details__elenco">
+        <div class="details__elenco" data-aos="fade-up">
           <h4 class="details__elenco__title title--small">Elenco</h4>
           <ul class="details__elenco__list">
             <li class="details__elenco__list__item">
-              <img src="../dist/images/elenco/robert.jpg" alt="robert" />
+              <img
+                src="../dist/images/elenco/robert.jpg"
+                alt="robert"
+                loading="lazy"
+              />
               <p class="text--small">Robert Downey Jr.</p>
             </li>
             <li class="details__elenco__list__item">
               <img
                 src="../dist/images/elenco/chris-evans.jpg"
                 alt="chris-evans"
+                loading="lazy"
               />
               <p class="text--small">Chris Evans</p>
             </li>
@@ -351,6 +353,7 @@
               <img
                 src="../dist/images/elenco/chris-hemsworth.jpg"
                 alt="chris-hemsworth"
+                loading="lazy"
               />
               <p class="text--small">Chris Hemsworth</p>
             </li>
@@ -358,17 +361,23 @@
               <img
                 src="../dist/images/elenco/mark-ruffalo.jpg"
                 alt="mark-ruffalo"
+                loading="lazy"
               />
               <p class="text--small">Mark Ruffalo</p>
             </li>
             <li class="details__elenco__list__item">
-              <img src="../dist/images/elenco/scarlett.jpg" alt="scarlet" />
+              <img
+                src="../dist/images/elenco/scarlett.jpg"
+                alt="scarlet"
+                loading="lazy"
+              />
               <p class="text--small">Scarlett Johansson</p>
             </li>
             <li class="details__elenco__list__item">
               <img
                 src="../dist/images/elenco/brie-larson.jpg"
                 alt="brie-larson"
+                loading="lazy"
               />
               <p class="text--small">Brie Larson</p>
             </li>
@@ -377,17 +386,20 @@
       </div>
     </section>
 
-    <section class="review">
+    <section class="review" data-aos="fade-up">
       <h2 class="title">Críticas Sobre o Filme</h2>
       <h4 class="title title--small">
         Descubra o que os principais portais de entretenimento acharam sobre
         essa produção cinematográfica.
       </h4>
       <ul class="review__accordion">
-        <li class="review__accordion__item">
+        <li class="review__accordion__item" data-aos="fade-right">
           <div class="review__accordion__item__header">
             <div class="review__accordion__item__header__text">
-              <img src="./images/criticas/adoro-cinema.png" alt="" />
+              <img
+                src="../dist/images/criticas/adoro-cinema.png"
+                alt="adoro-cinema"
+              />
             </div>
             <i class="bi bi-chevron-down"></i>
           </div>
@@ -409,10 +421,13 @@
             </ul>
           </div>
         </li>
-        <li class="review__accordion__item">
+        <li class="review__accordion__item" data-aos="fade-right">
           <div class="review__accordion__item__header">
             <div class="review__accordion__item__header__text">
-              <img src="./images/criticas/roten-tomates.png" alt="" />
+              <img
+                src="../dist/images/criticas/roten-tomates.png"
+                alt="roten-tomates"
+              />
             </div>
             <i class="bi bi-chevron-down"></i>
           </div>
@@ -433,10 +448,10 @@
             </ul>
           </div>
         </li>
-        <li class="review__accordion__item">
+        <li class="review__accordion__item" data-aos="fade-right">
           <div class="review__accordion__item__header">
             <div class="review__accordion__item__header__text">
-              <img src="./images/criticas/omelete.png" alt="" />
+              <img src="../dist/images/criticas/omelete.png" alt="omelete" />
             </div>
             <i class="bi bi-chevron-down"></i>
           </div>
@@ -457,10 +472,10 @@
             </ul>
           </div>
         </li>
-        <li class="review__accordion__item">
+        <li class="review__accordion__item" data-aos="fade-right">
           <div class="review__accordion__item__header">
             <div class="review__accordion__item__header__text">
-              <img src="./images/criticas/cinepop.png" alt="" />
+              <img src="../dist/images/criticas/cinepop.png" alt="cinepop" />
             </div>
             <i class="bi bi-chevron-down"></i>
           </div>
@@ -484,9 +499,9 @@
       </ul>
     </section>
 
-    <section class="trailer">
+    <section class="trailer" id="trailer" data-aos="fade-up">
       <h2 class="title">Assista o Trailer</h2>
-      <div class="trailer__container">
+      <div class="trailer__container" data-aos="fade-up">
         <div class="trailer__container__video">
           <iframe
             width="400"
@@ -496,36 +511,47 @@
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
+            loading="lazy"
           ></iframe>
         </div>
       </div>
     </section>
 
-    <section class="trilogia">
+    <section class="trilogia" data-aos="fade-up">
       <h2 class="title">Veja Mais</h2>
       <h4 class="title title--small">
-        Aprofunde-se no universo dos Vingadores: Conheça outros filmes da saga e suas histórias épicas!
+        Aprofunde-se no universo dos Vingadores: Conheça outros filmes da saga e
+        suas histórias épicas!
       </h4>
       <ul class="trilogia__list">
-        <li class="trilogia__list__item">
+        <li class="trilogia__list__item" data-aos="fade-right">
           <a
             href="https://www.disneyplus.com/pt-br/movies/the-avengers-os-vingadores-da-marvel-studios/2h6PcHFDbsPy"
             target="_blank"
-            ><img src="./images/trilogia/vingadores1.png" alt="vingadores 1"
+            ><img
+              src="../dist/images/trilogia/vingadores1.png"
+              alt="vingadores 1"
+              loading="lazy"
           /></a>
         </li>
-        <li class="trilogia__list__item">
+        <li class="trilogia__list__item" data-aos="fade-down">
           <a
             href="https://www.disneyplus.com/pt-br/movies/vingadores-era-de-ultron-da-marvel-studios/76IUxY0rNHzt"
             target="_blank"
-            ><img src="./images/trilogia/vingadores2.png" alt="vingadores 2"
+            ><img
+              src="../dist//images/trilogia/vingadores2.png"
+              alt="vingadores 2"
+              loading="lazy"
           /></a>
         </li>
-        <li class="trilogia__list__item">
+        <li class="trilogia__list__item" data-aos="fade-left">
           <a
             href="https://www.disneyplus.com/pt-br/movies/vingadores-guerra-infinita-da-marvel-studios/1WEuZ7H6y39v"
             target="_blank"
-            ><img src="./images/trilogia/vingadores3.png" alt="vingadores 3"
+            ><img
+              src="../dist/images/trilogia/vingadores3.png"
+              alt="vingadores 3"
+              loading="lazy"
           /></a>
         </li>
       </ul>
@@ -535,7 +561,7 @@
       <button class="footer__btn" id="scrollTop" title="Ir para o topo">
         <i class="bi bi-chevron-double-up"></i>
       </button>
-      <img class="footer__image" src="./images/marvel.png" alt="marvel" />
+      <img class="footer__image" src="../dist/images/marvel.png" alt="marvel" />
       <div class="footer__social-links">
         <a href="https://instagram.com/marvel" target="_blank"
           ><i class="bi bi-instagram"></i
@@ -553,13 +579,9 @@
     </footer>
 
     <!-- Scripts -->
-    <script
-      src="https://code.jquery.com/jquery-3.7.0.min.js"
-      integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
-      crossorigin="anonymous"
-    ></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="./scripts/main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../dist/js/main.js"></script>
   </body>
 </html>

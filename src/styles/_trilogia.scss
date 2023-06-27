@@ -1,12 +1,19 @@
-@use 'variables';
+@use "variables";
 
 .trilogia {
   padding: 6vw;
+  overflow-x: hidden;
 
   &__list {
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: 1fr 36px 1fr 36px 1fr;
     grid-template-columns: repeat(3, 1fr);
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     list-style: none;
     padding: 0;
@@ -14,25 +21,38 @@
     gap: 36px;
 
     @media (max-width: 768px) {
+      -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
     }
 
     &__item {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
       justify-content: center;
 
       a {
         overflow: hidden;
+        -webkit-box-shadow: variables.$imgShadow;
         box-shadow: variables.$imgShadow;
 
         &:hover img {
+          -webkit-transform: scale(1.05);
+          -ms-transform: scale(1.05);
           transform: scale(1.05);
         }
-        
+
         img {
           width: 200px;
+          -o-object-fit: cover;
           object-fit: cover;
+          -webkit-transition: -webkit-transform 0.8s;
+          transition: -webkit-transform 0.8s;
+          -o-transition: transform 0.8s;
           transition: transform 0.8s;
+          transition: transform 0.8s, -webkit-transform 0.8s;
           cursor: pointer;
         }
       }
