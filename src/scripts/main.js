@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const acordionHeader = document.getElementsByClassName(
     "review__accordion__item__header"
   );
-  const top = document.getElementById("scrollTop");
+  const goToTop = document.querySelector(".footer__btn");
 
   // Efeito para o scroll no header usando jquery
   $(window).scroll(function () {
@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // ir para o topo
-  top.addEventListener("click", function () {
+  goToTop.addEventListener("click", function () {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
   });
