@@ -1,6 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
   AOS.init();
-  const acordionHeader = document.getElementsByClassName("review__accordion__item__header");
+  const acordionHeader = document.getElementsByClassName(
+    "review__accordion__item__header"
+  );
   const top = document.getElementById("scrollTop");
 
   // Efeito para o scroll no header usando jquery
@@ -33,6 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.documentElement.scrollTop = 0;
   });
 
+  //Botão para fechar o frame do trailer
   document.getElementById("close").addEventListener("click", function () {
     document.documentElement.classList.add("hidden");
   });
