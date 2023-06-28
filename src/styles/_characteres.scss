@@ -27,9 +27,8 @@
     }
 
     @media (max-width: 768px) {
-      display: inline;
+      display: block;
       overflow: auto;
-      overflow-y: hidden;
       white-space: nowrap;
     }
 
